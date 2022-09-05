@@ -1,0 +1,56 @@
+.ads-sponsored{
+    margin: 12px;
+    h2{
+
+     color: white;
+     font-size: 1.3em;
+     padding: 0px;
+     margin-bottom: 4px;
+    }
+    .ads-card
+    {
+        display: flex;
+
+        overflow: hidden;
+        .ads-img{
+            width: 40%;
+            height: 40%;
+            min-width: 90px;
+            border-radius: 8px;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+        .ads-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 12px;
+
+            .ads-title{
+                color: white;
+                font-size: 1.3em;
+                letter-spacing: 1px;
+            }
+            .ads-desc{
+                font-size: 0.9em;
+                color: grey;
+
+                a{
+                    display: block;
+                    text-decoration: none;
+                    color:inherit;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .card-right{
+        flex-direction: row;
+    }
+}

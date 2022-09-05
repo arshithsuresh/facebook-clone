@@ -1,0 +1,7 @@
+<div class="avatar">
+    <div class="img-div">
+        <span class="active" *ngIf="userData?.status"></span>
+        <img src="assets/ico/avatar.png" *ngIf="userData?.imgUrl==undefined" alt="">
+        <img [src]="userData?.imgUrl" *ngIf="userData?.imgUrl!=undefined" alt="">
+    </div>
+</div>

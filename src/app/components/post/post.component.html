@@ -1,0 +1,52 @@
+<div class="home-post">
+    <div class="post-header">
+        <div class="owner-profile-info">
+            <app-avatar [user]="postData?.user"></app-avatar>
+            <div class="profile-data">
+                <p class="profile-name">{{postData?.user?.name}}</p>
+                <p class="post-additional-info"> 
+                    <span *ngIf="postData?.sponsored">Sponsored</span>  
+                    <span *ngIf="postData?.sponsored==false">{{getDate()}}</span>
+                    <span class="post-privacy"><span class="material-icons">public</span></span></p>
+            </div>
+        </div>
+        <button class="btn-more">
+            <span class="material-icons">more_horiz</span>
+        </button>
+        <div class="post-more-options d-none">
+
+        </div>
+        
+    </div>
+    <div class="post-content">
+        <p class="main-content">{{postData?.content}}</p>
+        <ul class="hash-tags" *ngIf="postData?.tags">
+            <li *ngFor="let tag of postData?.tags"><a href="#">{{tag}}</a></li>            
+        </ul>
+    </div> 
+    <div class="post-media w-100" *ngIf="hasMedia()">
+        <img [src]="getMedia()" (click)="onImageClicked()"  alt="">
+    </div>
+    <div class="post-statistics">
+        <p>Likes : {{postData?.likes}} </p>
+        <p>Comments : {{postData?.comments}} </p>
+    </div>
+    <div class="post-interactions">
+        <button (click)="onLike()">
+            <em [ngClass]="{active:liked}" class="photo-video material-icons active" >thumb_up</em>
+            <span [ngClass]="{active:liked}">Like</span>
+        </button>
+        <button>
+            <em class="photo-video material-icons">chat_bubble</em>
+            <span>Comment</span>
+        </button>
+        <button>
+            <em class="photo-video material-icons">send</em>
+            <span>Share</span>
+        </button>
+        <button>
+            <em class="photo-video material-icons">account_circle</em>
+            <span></span>
+        </button>
+    </div>
+</div>

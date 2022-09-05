@@ -1,0 +1,14 @@
+<div class="chat-contact">
+    <div class="chat-header">
+        <p>Contacts</p>
+        <button class="more-options">
+            <span class="material-icons">more_horiz</span>
+        </button>
+    </div>
+    <div class="chat-list">
+        <div class="chat-profile" *ngFor="let contact of contacts">
+            <app-avatar [user]="contact"></app-avatar>
+            <p>{{ contact.name }}</p>
+        </div>
+    </div>
+</div>

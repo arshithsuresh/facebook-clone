@@ -1,0 +1,23 @@
+<p>training works!</p>
+<button class="btn btn-primary" *ngIf="!isLoggedIn" (click)="onLoginButtonClick()" >Login</button>
+<button class="btn btn-primary" *ngIf="isLoggedIn" (click)="onLogoutButtonClick()" >Logout</button>
+
+<p>
+    {{"Male" | NamePrefix}}
+</p>
+<button class="btn btn-primary" (click)="onGetProductClicked()">
+    Get Products
+</button>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>   
+    <tr *ngFor="let product of products;">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+    </tr>
+</table>

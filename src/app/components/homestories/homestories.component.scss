@@ -1,0 +1,117 @@
+.home-stories{
+    height: 260px;            
+    margin: 4px;
+    margin-top: 12px;
+    width: 100%;            
+    display: flex;
+    flex-direction: row; 
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+
+    .story-viewer{
+        
+        width: 100%;            
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        transform: translateX(0);
+    }
+
+    .story-actions{
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        span{
+            font-weight: 600;
+            padding: 4px;
+            font-size: 36px;
+        }
+        .go-left,.go-right{
+            position: absolute;    
+            padding: 0px;
+            margin: 0px;                
+            top: 120px;
+            width: 46px;
+            height: 46px;
+            border-radius: 46px;
+            background-color: white;
+            text-align: center;  
+            border: none;               
+            box-shadow: -4px 0px 12px rgba(0, 0, 0, 1) ;
+        }
+        .go-left{
+            left: 12px;
+        }
+        .go-right{
+            right: 12px;
+        }
+       
+    }
+    .new-story{      
+        height: 100%;
+        min-width: 146px;                
+        background: #000;
+        border-radius: 8px;                
+        margin: 0px 4px;
+        position: relative;
+        overflow: hidden;          
+        .create-background{
+            position: absolute;
+            background: var(--color-dark);
+            width: 100%;
+            height: 100%;
+            img{
+                height:  100%;
+                transition: all 0.2s ease-in;
+                &:hover{
+                    height: 110%;
+                    transform: translate(-5%,-5%);
+                }
+            }
+        }
+
+        .create-action{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            box-shadow: -4px 0px 12px rgba(0, 0, 0, 0.4) ;
+            
+            button{
+                height: 50px;
+                width: 50px;
+                background-color: white;
+                border-radius: 30px;
+                position: relative;
+                top: -25px;
+                margin: 0;
+                padding: 0px;
+                span{
+                    padding: 0px;
+                    margin: 0px;
+                    font-size:48px;
+                    color: var(--color-blue);
+                }
+            }
+            p{
+                padding: 0px;
+                margin: 0px;
+                position: relative;
+                bottom: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+    &:first-child{
+        margin-left: 0px !important;
+    }
+    &:last-child{
+        margin-right: 0px !important;
+    }
+}

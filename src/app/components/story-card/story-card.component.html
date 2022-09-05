@@ -1,0 +1,9 @@
+<div class="story-card">
+    <div class="story-content">
+        <img [src]="storyData.imgUrl" alt="">                        
+    </div>
+    <app-avatar class="profile-avatar" [user]="storyData.user"></app-avatar>                  
+    <div class="profile-name">
+        <p>{{storyData.user.name}}</p>        
+    </div>
+</div>

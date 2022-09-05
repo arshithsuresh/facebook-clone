@@ -1,0 +1,40 @@
+.chat-contact{
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+    .chat-list{
+        .chat-profile{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 8px;
+            
+            p{
+                padding: 0px;
+                margin: 0px;
+                color: white;
+                margin-left: 12px;
+                font-size: 1.2em;
+            }
+        }
+    }
+    
+    .chat-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 4px;
+        p{
+            font-weight: 500;
+            font-size: 1.2em;
+            color: white;
+        }
+        .more-options{
+            background-color: transparent;
+            border: none;
+            span{
+                color: white;
+            }
+        }
+    }
+}

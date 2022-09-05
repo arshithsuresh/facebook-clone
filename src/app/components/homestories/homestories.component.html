@@ -1,0 +1,31 @@
+<div class="home-stories" #viewercontainer>
+    <div class="story-actions">
+        <button class="go-left" *ngIf="page>0" (click)="onPrevStorySet()"> 
+            <span class="material-icons">
+            navigate_before
+            </span>
+        </button>
+        <button class="go-right" (click)="onNextStorySet()">
+            <span class="material-icons">
+                navigate_next
+            </span>
+        </button>
+    </div>
+    <div class="story-viewer" #viewer   [style.transform]="'translateX(' + dragX + 'px)'" >                    
+        <div class="story-card new-story" *ngIf="page==0" >
+            <div class="create-background">
+                <img src="assets/stories/image4.jpg" alt="" >   
+            </div>
+            <div class="create-action">
+                <button class="create btn"><span class="material-icons">
+                    add_circle
+                </span></button>
+                <p>                    
+                    Create Story
+                </p>
+            </div>
+        </div>                          
+        <app-story-card *ngFor="let story of stories" [data]="story" >            
+        </app-story-card>
+    </div>
+</div>

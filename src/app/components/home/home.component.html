@@ -1,0 +1,97 @@
+<div class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">        
+        <div class="container-fluid">            
+            <div class="row w-100 navbar-row">
+                <div class="col-md-3 left-nav">
+                    <a class="navbar-brand">
+                        <img src="assets/img/logo.svg" alt="">
+                    </a>
+                    <input type="text" class="form-control nav-search" active ngModel placeholder="Search..."> 
+                </div>
+                <div class="col-md-7 col-lg-5 center-nav">
+                    <button class="btn-home-tab w-100 active">
+                        <em class="material-icons">home</em>
+                    </button>
+                    <button class="btn-home-tab w-100">
+                        <em class="material-icons">smart_display</em>
+                    </button>
+                    <button class="btn-home-tab w-100">
+                        <em class="material-icons">store</em>
+                    </button>
+                    <button class="btn-home-tab w-100">
+                        <em class="material-icons">groups</em>
+                    </button>
+                    <button class="btn-home-tab w-100">
+                        <em class="material-icons">view_quilt</em>
+                    </button>
+                </div>
+                <div class="col-md-3 right-nav">
+                    <button class="right_icon btn">
+                        <em class="material-icons">apps</em>
+                    </button>
+                    <button class="right_icon btn">
+                        <em class="material-icons">chat</em>
+                    </button>
+                    <button class="right_icon btn">
+                        <em class="material-icons">notifications</em>
+                    </button>
+                    <button class="right_avatar btn">
+                        <img src="https://i0.wp.com/sguru.org/wp-content/uploads/2017/04/WhatsApp-DP-for-Boys-78-1.jpg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    
+</div>
+<div class="body container-fluid">
+    <div class="row justify-content-between">
+        <div class="col-md-3 left-body d-none d-lg-block">
+            <ul>
+                <li>
+                    <a href=""><img src="https://i0.wp.com/sguru.org/wp-content/uploads/2017/04/WhatsApp-DP-for-Boys-78-1.jpg" alt=""> <span>Arshith Suresh </span> </a>
+                </li>
+                <li>
+                    <a href=""><img src="assets/ico/friends.png" alt=""><span >Friends</span>  </a>
+                </li>
+                <li><a href=""><img src="assets/ico/marketplace.png" alt=""><span>Marketplace</span>  </a></li>
+                <li><a href=""><img src="assets/ico/watch.png" alt=""><span>Watch</span>  </a></li>
+                <li><a href=""><img src="assets/ico/memories.png" alt=""><span>Memories</span>  </a></li>
+                <li><a href=""><img src="assets/ico/climate.png" alt=""><span>Climate Centre</span>  </a></li>
+                <li><a href=""><img src="assets/ico/favorites.png" alt=""><span>Favorites</span>  </a></li>
+                <li><a href=""><img src="assets/ico/groups.png" alt=""><span>Groups</span>  </a></li>
+            </ul>
+            <hr>
+            <h2>Your shortcuts</h2>
+            <ul>
+                <li><a href=""><img src="assets/ico/cam1.png" alt=""><span>Page 1</span>  </a></li>
+                <li><a href=""><img src="assets/ico/pizza.jpg" alt=""><span>Page 1</span>  </a></li>
+                <li><a href=""><img src="assets/ico/icecream.jpg" alt=""><span>Page 1</span>  </a></li>
+                <li><a href=""><img src="assets/ico/bootstrap.png" alt=""><span>Page 1</span>  </a></li>                
+            </ul>
+        </div>
+        <div class="col-md-7 col-lg-6 center-body">            
+            <!--Stories-->
+            <app-homestories></app-homestories>
+
+            <!--Status-->
+            <app-createpost></app-createpost>
+
+            <!--Post or Image-->
+            <app-post *ngFor="let post of posts" (postMediaClick)="selectPost($event)" [data]="post" ></app-post>
+
+        </div>
+        <div class="col-md-5 col-lg-3 right-body">
+            <app-adssidebar [data]="adsData"></app-adssidebar>
+            <hr>
+            <app-chatbar [contacts]="chatContacts"></app-chatbar>
+        </div>
+    </div>
+    <div class="row chat-box-messenger">
+        <div class="col-md-2">
+            
+        </div>
+    </div>
+</div>
+

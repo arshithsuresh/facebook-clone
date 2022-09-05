@@ -1,0 +1,49 @@
+<div class="">
+    <div class="">
+        <div class="login-content container-fluid bg-light">
+            <div class="row align-items-center">
+                <div class="col-md-7 brand">
+                    <img class="logo" src="assets/img/fb-logo-1.jpg" alt="" >
+                    <p>
+                        Facebook helps you connect and share with the people in your life.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <mat-card>
+                        <mat-card-title class="login-card-title">Login</mat-card-title>
+                        <mat-card-content class="m-2">
+                            
+                            <form #form="ngForm" name="form" class="login-form" action="" (submit)="login(form)">
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input type="text" id="email" [(ngModel)]="username" name="email" ngModel placeholder="Email Address..." class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="Password..." class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn w-100 btn-primary btn-login" (click)="login"> Login</button>
+                                </div>                          
+                                
+                            </form>
+                            <div class="forgot-password">
+                                <a class="" href="#">Forgotten Password?</a>
+                            </div>
+                            
+                            <hr>
+                            <a routerLink="/signup"><button class="btn btn-success w-100 btn-register" (click)="openRegisterForm()"> Register</button>  </a>                      
+                        </mat-card-content>
+                        
+                    </mat-card>
+                    <div class="create-page">
+                        <a href="#createPage">Create a Page</a> for a celebrity, brand or business.
+                    </div>
+                    
+                </div>
+            </div>        
+        </div>
+    </div>
+        <app-footer></app-footer>
+</div>
+

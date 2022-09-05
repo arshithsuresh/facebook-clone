@@ -1,0 +1,85 @@
+<section class="register">
+    <div class="logo">
+        <img src="assets/img/fb-logo-1.jpg" alt="">
+    </div>
+    <div class="signup-form">
+        <div class="header">
+            <h3>Create new account</h3>
+            <p>It's quick and easy!</p>
+        </div>
+        <hr>
+        <div class="body container">
+            <form action="">
+                <div class="row form-group">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="First name" name="fname" ngModel>   
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Last name" name="lname" ngModel>
+                    </div>                
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email Address" name="email" ngModel>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="password" class="form-control" ngModel>                         
+                </div>
+                <div class="row form-group date-of-birth">
+                    <label>Date of Birth</label>
+                    <div class="col">
+                        <select class="form-control" name="" id="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" name="" id="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input type="date" ngModel>
+                    </div>
+                </div>
+                <div class="row form-group gender">
+                    <label for="">Gender</label>
+                    <div class="col">
+                        <div class="gender-select">
+                            <label>Female</label>
+                            <input class="" type="radio" value="f" name="gender" id="gender">
+                        </div>                    
+                    </div>
+    
+                    <div class="col">
+                        <div class="gender-select">
+                            <label>Male</label>
+                            <input class="" type="radio" value="m" name="gender" id="gender">
+                        </div>                    
+                    </div>
+    
+                    <div class="col">
+                        <div class="gender-select">
+                            <label>Other</label>
+                            <input class="" type="radio" value="o" name="gender" id="gender">
+                        </div>                    
+                    </div>
+                    
+                </div>
+                <div class="terms-conditions">
+                    <p>People who use our service may have uploaded your contact information to Facebook. Learn more.</p>
+                    <p>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-success">Sign Up</button>
+                    <a href="#signin"> Already have an account</a>
+                </div>
+                
+            </form>
+        </div>
+    </div>    
+</section>
+
+<app-footer></app-footer>

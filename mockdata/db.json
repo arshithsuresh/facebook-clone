@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "sponsored": true,
+      "user":{
+        "id":12302,
+        "name": "John Lucas",
+        "status": "active",
+        "story": "true",
+        "imgUrl":""
+      },
+      "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam amet ex quam sequi eos, molestias eveniet aut officiis veniam voluptas sapiente distinctio, consequatur recusandae nesciunt neque accusantium nam animi ratione!",
+      "hashtags":["tag1","tag2","tag3","tag4"],
+      "media":[
+        {
+          "image":""
+        }
+      ],
+      "likes":120,
+      "comments":15,   
+      "created_at": "2020-04-01T10:00:00.000Z"
+    }
+      
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
