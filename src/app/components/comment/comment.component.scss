@@ -1,0 +1,33 @@
+
+        .comment-container{
+            display: flex;
+            flex-direction: row;
+            column-gap: 8px;
+            .comment-content{  
+                p{
+                    padding: 0px;
+                    margin: 0px;
+                }
+                .user-name{
+                    font-size: 1.1em;
+                    font-weight: 400;
+                    color: white;
+                }
+                .comment{
+                    color: grey;
+                }
+                span{
+                    color:white;
+                }
+                button{
+                    color: white;
+                    margin-top: 8px;
+                    font-size: 0.9em;
+                    background-color: transparent;
+                    border: none;
+                    &:hover{
+                        color: grey;
+                    }
+                }
+            }
+        }

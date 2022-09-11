@@ -36,7 +36,7 @@
             <em [ngClass]="{active:liked}" class="photo-video material-icons active" >thumb_up</em>
             <span [ngClass]="{active:liked}">Like</span>
         </button>
-        <button>
+        <button (click)="onCommentsClick()">
             <em class="photo-video material-icons">chat_bubble</em>
             <span>Comment</span>
         </button>
@@ -47,6 +47,12 @@
         <button>
             <em class="photo-video material-icons">account_circle</em>
             <span></span>
+        </button>
+    </div>
+    <div class="post-comments" *ngIf="viewComments">
+        <app-comment></app-comment>
+        <button class="view-more">
+            View More
         </button>
     </div>
 </div>

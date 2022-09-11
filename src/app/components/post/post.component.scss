@@ -7,6 +7,25 @@
     
     width: 100%;
     overflow: hidden;
+
+    .post-comments{
+        padding: 4px 18px;
+        margin-bottom: 12px;
+        
+        .view-more{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: transparent;
+            color: var(--color-light-grey);
+            border:none;
+
+            &:hover{
+                color:grey;
+            }
+        }
+        
+    }
     .post-statistics{
         display: flex;
         flex-direction: row;

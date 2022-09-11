@@ -19,6 +19,8 @@ import { PostComponent } from './components/post/post.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdssidebarComponent } from './components/adssidebar/adssidebar.component';
 import { HomestoriesComponent } from './components/homestories/homestories.component';
+import { CommentComponent } from './components/comment/comment.component';
+import { LoggingService } from './services/logging/logging.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { HomestoriesComponent } from './components/homestories/homestories.compo
     PostComponent,
     CreatepostComponent,
     AdssidebarComponent,
-    HomestoriesComponent 
+    HomestoriesComponent,
+    CommentComponent 
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,9 @@ import { HomestoriesComponent } from './components/homestories/homestories.compo
   exports:[
     FormsModule
   ],
-  providers: [],
+  providers: [
+    LoggingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,6 +13,11 @@ export class PostComponent implements OnInit {
   @Input('data') postData?:Post;
 
   liked:boolean = false;
+  viewComments:boolean = true;
+
+  onCommentsClick():void{
+    this.viewComments = !this.viewComments;
+  }
 
   getDate():string{
     if(this.postData){
