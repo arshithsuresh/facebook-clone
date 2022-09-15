@@ -114,7 +114,7 @@
             <app-createpost></app-createpost>
 
             <!--Post or Image-->
-            <app-post *ngFor="let post of posts" (postMediaClick)="selectPost($event)" [data]="post" ></app-post>
+            <app-post *ngFor="let post of posts; index as i" (postMediaClick)="selectPost($event)" [data]="post" [index]="i" ></app-post>
 
         </div>
         <div class="col-md-5 col-lg-3 right-body">
@@ -128,5 +128,9 @@
             
         </div>
     </div>
+</div>
+
+<div class="chat-container">
+    
 </div>
 
