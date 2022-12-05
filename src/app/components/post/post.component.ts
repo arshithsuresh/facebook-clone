@@ -1,7 +1,6 @@
 import { formatDate } from '@angular/common';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Post } from 'src/app/model/posts/post';
-import { PostServices } from './post.service';
 
 @Component({
   selector: 'app-post[data]',
@@ -11,12 +10,9 @@ import { PostServices } from './post.service';
 export class PostComponent implements OnInit {
   @Output() postMediaClick = new EventEmitter<Post>();
   @Input('data') postData?: Post;
-  @Input('index') index: number = 0;
 
   liked: boolean = false;
   viewComments: boolean = false;
-
-  constructor(private postService: PostServices) {}
 
   onCommentsClick(): void {
     this.viewComments = !this.viewComments;
@@ -37,13 +33,8 @@ export class PostComponent implements OnInit {
   onLike() {
     if (this.postData) {
       this.liked = !this.liked;
-      if (this.liked) {
-        //this.postData.likes = this.postData.likes+1;
-        this.postService.likePost(this.index);
-      } else {
-        this.postService.unLikePost(this.index);
-        //this.postData.likes = this.postData.likes-1;
-      }
+      if (this.liked) this.postData.likes = this.postData.likes + 1;
+      else this.postData.likes = this.postData.likes - 1;
     }
   }
 
@@ -56,6 +47,8 @@ export class PostComponent implements OnInit {
   getMedia(): any {
     return this.postData?.media?.at(0)?.url;
   }
+
+  constructor() {}
 
   ngOnInit(): void {}
 }
