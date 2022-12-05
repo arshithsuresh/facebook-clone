@@ -10,6 +10,7 @@ import { Post } from 'src/app/model/posts/post';
 export class PostComponent implements OnInit {
   @Output() postMediaClick = new EventEmitter<Post>();
   @Input('data') postData?: Post;
+  @Input('index') index?: number;
 
   liked: boolean = false;
   viewComments: boolean = false;
