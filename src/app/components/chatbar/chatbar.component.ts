@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from 'src/app/model/user/user.model';
+import { User } from '../../model/user/user.model';
 @Component({
   selector: 'app-chatbar',
   templateUrl: './chatbar.component.html',

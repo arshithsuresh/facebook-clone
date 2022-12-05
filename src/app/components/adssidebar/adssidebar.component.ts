@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AdsSponsored } from 'src/app/model/ads/ads.model';
+import { AdsSponsored } from '../../model/ads/ads.model';
 
 @Component({
   selector: 'app-adssidebar',

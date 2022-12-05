@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoggingService } from 'src/app/services/logging/logging.service';
+import { LoggingService } from '../../services/logging/logging.service';
 
 @Component({
   selector: 'app-createpost',

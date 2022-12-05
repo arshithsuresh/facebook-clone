@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AdsSponsored } from 'src/app/model/ads/ads.model';
-import { Post } from 'src/app/model/posts/post';
-import { User } from 'src/app/model/user/user.model';
+import { AdsSponsored } from '../../model/ads/ads.model';
+import { Post } from '../../model/posts/post';
+import { User } from '../../model/user/user.model';
 import { PostServices } from '../post/post.service';
 @Component({
   selector: 'app-home',
