@@ -18,19 +18,22 @@
         }
       ],
       "likes":120,
-      "comments":15,   
+      "comments":[
+        {
+          "user":{
+            "id":12302,
+            "name": "John Lucas",
+            "status": "active",
+            "story": "true",
+            "imgUrl":""
+          },
+          "text": "Lorem ipsum, dolor sit amet consectetur adipisicing 12",
+          "likes":123
+
+        }
+      ],   
       "created_at": "2020-04-01T10:00:00.000Z"
-    }
-      
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    }      
+  ]
+  
 }

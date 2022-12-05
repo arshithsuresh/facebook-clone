@@ -13,26 +13,26 @@ import { PostComponent } from './components/post/post.component';
 
 const routes: Routes = [
   {
-    path:'home',    
+    path: '',
     component: HomeComponent,
-    canActivate: [FacebookGuard],    
+    canActivate: [FacebookGuard],
   },
   {
-    path:'login',
-    component: LoginComponent
+    path: 'login',
+    component: LoginComponent,
   },
   {
-    path:'signup',
-    component:SignupComponent
+    path: 'signup',
+    component: SignupComponent,
   },
   {
-    path:'training',
-    component: TrainingComponent
-  }  
+    path: 'training',
+    component: TrainingComponent,
+  },
 ];
 
-@NgModule({  
+@NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

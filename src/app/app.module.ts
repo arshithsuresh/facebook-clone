@@ -21,6 +21,7 @@ import { AdssidebarComponent } from './components/adssidebar/adssidebar.componen
 import { HomestoriesComponent } from './components/homestories/homestories.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { LoggingService } from './services/logging/logging.service';
+import { ChatboxComponent } from './components/chatbox/chatbox.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { LoggingService } from './services/logging/logging.service';
     CreatepostComponent,
     AdssidebarComponent,
     HomestoriesComponent,
-    CommentComponent 
+    CommentComponent,
+    ChatboxComponent 
   ],
   imports: [
     BrowserModule,

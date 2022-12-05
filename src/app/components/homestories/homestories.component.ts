@@ -1,11 +1,13 @@
 import { Component, ElementRef, OnInit, ViewChild, Renderer2, AfterViewChecked} from '@angular/core';
 import { Story } from 'src/app/model/stories/story.mode';
 import { LoggingService } from 'src/app/services/logging/logging.service';
+import { HomestoriesServices } from './homestories.service';
 
 @Component({
   selector: 'app-homestories',
   templateUrl: './homestories.component.html',
-  styleUrls: ['./homestories.component.scss']
+  styleUrls: ['./homestories.component.scss'],
+  providers: [HomestoriesServices]
   
 })
 export class HomestoriesComponent implements OnInit,AfterViewChecked {
@@ -14,13 +16,14 @@ export class HomestoriesComponent implements OnInit,AfterViewChecked {
   stories: Story[];
   page:number =0;
   dragX:number = 0;
-  constructor(private renderer:Renderer2, private loggingService:LoggingService) {
+  constructor(private renderer:Renderer2, private loggingService:LoggingService, private homeStoriesService:HomestoriesServices) {
     this.stories = Story.getMockStories();    
   }
   onNextStorySet(){
     this.page +=1;
     this.dragX = -this.page*154;
     this.loggingService.logInformation("Test Message");
+    this.homeStoriesService.getNextStory();
     //this.stories = this.stories.slice(1);
     
   }
@@ -30,7 +33,8 @@ export class HomestoriesComponent implements OnInit,AfterViewChecked {
   }
 
   ngOnInit(): void {
-    console.log(this.storyviwer?.nativeElement.offsetWidth);    
+    console.log(this.storyviwer?.nativeElement.offsetWidth);  
+    this.homeStoriesService.nextStoryRequsted.subscribe((story)=>this.stories.push(story));  
   }
 
   ngAfterViewChecked(): void {
